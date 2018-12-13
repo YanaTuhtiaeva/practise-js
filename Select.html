@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Select</title>
+</head>
+<body>
+	<select id="select" onchange="change()">
+		<option value="">1</option>
+		<option value="">2</option>
+		<option value="">3</option>
+		<option value="">4</option>
+	</select>
+
+	<script>
+		function change() {
+			var select = document.getElementById("select").selectedIndex;
+			var option = document.getElementById("select").options; 
+			alert("выбран " + option[select].text);
+		}
+		
+	</script>
+</body>
+</html>

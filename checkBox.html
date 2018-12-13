@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Checkbox</title>
+</head>
+<body>
+
+	<input type="Checkbox" id="Checkbox" onchange="changeCheckbox();">
+
+
+	<script>
+
+		function changeCheckbox() {
+			var checkBox = document.getElementById("Checkbox");
+
+			if(checkBox.checked) {
+				alert("Элемент выбран");
+			} 
+			else{
+				alert("Элемент не выбран");
+			}
+		};
+		
+	</script>
+	
+</body>
+</html>

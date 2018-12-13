@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>range</title>
+</head>
+<style>
+	#line {
+		width: 10px;
+		height: 10px;
+		background-color: red;
+	}
+	
+</style>
+<body>
+
+	<input type="range" value="0" min="0" max="100" step="2" id="range" oninput="range()">
+	<p id="chapter">0</p>
+	<div id="line"></div>
+	<script>
+		
+function range() {
+	var range = document.getElementById("range");
+	var chapter = document.getElementById("chapter");
+	var line = document.getElementById("line");
+
+	chapter.innerHTML = range.value;
+	line.style.width = range.value + "px";
+
+}
+
+	</script>
+	
+</body>
+</html>

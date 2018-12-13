@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BorderRadius</title>
+</head>
+<style>
+	#block {
+		width: 200px;
+		height: 100px;
+		background-color: blue;
+	}
+</style>
+<body>
+
+	<div class="blockInputs" oninput="changeBorder()">
+		<p>Верхний левый угол
+		<input type="range" value="0" min="0" max="100" id="vlu">
+		<input type="text" value="0"  id="tvlu"></p>
+		<p>Верхний правый угол
+		<input type="range" value="0" min="0" max="100" id="vpu">
+		<input type="text" value="0"  id="tvpu"></p>
+		<p>Нижний правый угол
+		<input type="range" value="0" min="0" max="100" id="npu">
+		<input type="text" value="0"  id="tnpu"></p>
+		<p>Нижний левый угол
+		<input type="range" value="0" min="0" max="100" id="nlu">
+		<input type="text" value="0"  id="tnlu"></p>
+
+	</div>
+
+	<div id="block"></div>
+
+	<script>
+		function changeBorder() {
+			var vlu = document.getElementById("vlu").value;
+			var tvlu = document.getElementById("tvlu");
+
+			var vpu = document.getElementById("vpu").value;
+			var tvpu = document.getElementById("tvpu");
+
+			var npu = document.getElementById("npu").value;
+			var tnpu = document.getElementById("tnpu");
+
+			var nlu = document.getElementById("nlu").value;
+			var tnlu = document.getElementById("tnlu");
+
+			tvlu.value = vlu;
+			tvpu.value = vpu;
+			tnpu.value = npu;
+			tnlu.value = nlu;
+
+			var block = document.getElementById("block");
+			block.style.borderRadius = vlu +"px " +  vpu +"px " +  npu +"px " +  nlu +"px ";
+
+		}
+
+	</script>
+	
+</body>
+</html>

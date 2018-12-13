@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>radioBtn</title>
+</head>
+<body>
+
+	<input type="radio" name="radio" value="1">1
+	<input type="radio" name="radio" value="2">2
+	<input type="radio" name="radio" value="3">3
+	<button onclick="checkBtn()">Проверить</button>
+
+	<script>
+		
+		function checkBtn() {
+			var checkBtnArr = document.getElementsByName("radio");
+
+			for(var i=0; i< checkBtnArr.length; i++) {
+				if(checkBtnArr[i].checked) {
+					alert("выбран " + i + " элемент");
+				}
+			}
+		}
+
+	</script>
+	
+</body>
+</html>
